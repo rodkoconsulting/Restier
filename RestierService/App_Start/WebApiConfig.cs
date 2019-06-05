@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Web.Http;
 using System.Web.OData.Extensions;
 using Microsoft.Restier.Providers.EntityFramework;
@@ -12,6 +13,7 @@ namespace RestierService
 {
     public static class WebApiConfig
     {
+
         public static async void Register(HttpConfiguration config)
         {
             // Web API configuration and services
