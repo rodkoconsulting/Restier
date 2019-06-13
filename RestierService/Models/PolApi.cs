@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Http;
 using System.Web.OData.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OData.Edm;
@@ -19,16 +20,10 @@ namespace RestierService.Models
 {
     public class PolApi : EntityFrameworkApi<PolModel>
     {
-        private string GetUser()
-        {
-            var authHeader = HttpContext.Current.Request.Headers["Authorization"];
-            if (authHeader == null || !authHeader.StartsWith("Basic")) return "no username";
-            var encodedUsernamePassword = authHeader.Substring("Basic ".Length).Trim();
-            var encoding = Encoding.GetEncoding("iso-8859-1");
-            var usernamePassword = encoding.GetString(Convert.FromBase64String(encodedUsernamePassword));
-            var separatorIndex = usernamePassword.IndexOf(':');
-            return usernamePassword.Substring(0, separatorIndex);
-        }
+
+
+
+
 
         private class CustomizedModelBuilder : IModelBuilder
         {
@@ -46,36 +41,14 @@ namespace RestierService.Models
             }
         }
 
-        private class CustomizedAuthorizer : IQueryExpressionAuthorizer
-        {
-            public bool Authorize(QueryExpressionContext context)
-            {
-                
-                return true;
-            }
-        }
-        protected new static IServiceCollection ConfigureApi(Type apiType, IServiceCollection services)
-        {
-            //services.AddService<IModelBuilder, CustomizedModelBuilder>();
-            //services.AddService<IQueryExpressionInspector, CustomizedModelBuilder>();
-            //User = HttpContext.Current.Request.
-            services.AddService<IQueryExpressionAuthorizer, CustomizedAuthorizer>();
-            return EntityFrameworkApi<PolModel>.ConfigureApi(apiType, services);
-        }
-
-        protected IQueryable<AR_Customer> OnFilterAR_Customer(IQueryable<AR_Customer> entitySet)
-        {
-
-            return entitySet.Where(s => s.ARDivisionNo != "02").AsQueryable();
-        }
-
         [Resource]
-        public IQueryable<AR_Customer> OnPremiseCustomers
+        public IQueryable<ODataInvoices> GetPaInvoices
         {
 
             get
             {
-                    return DbContext.AR_Customer.Where(p => (p.CustomerType).Length == 4 && (p.CustomerType).Substring(2, 2) == "ON");
+                //return DbContext.AR_Customer.Where(p => (p.CustomerType).Length == 4 && (p.CustomerType).Substring(2, 2) == "ON");
+                return DbContext.ODataInvoices.Where(p => p.Territory == "PA");
             }
         }
 
