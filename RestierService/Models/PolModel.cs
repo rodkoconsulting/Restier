@@ -22,7 +22,7 @@ namespace RestierService
                .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Type)
+                .Property(e => e.Typ)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
@@ -34,27 +34,27 @@ namespace RestierService
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Affiliations)
+                .Property(e => e.Aff)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Description)
+                .Property(e => e.Desc)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Cases)
+                .Property(e => e.Qty)
                 .HasPrecision(15, 6);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Price)
+                .Property(e => e.Pri)
                 .HasPrecision(15, 6);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Total)
+                .Property(e => e.Tot)
                 .HasPrecision(11, 2);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Comment)
+                .Property(e => e.Cmt)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
@@ -62,51 +62,51 @@ namespace RestierService
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.RepAcct)
+                .Property(e => e.AcctR)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.RepInv)
+                .Property(e => e.InvR)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.WineType)
+                .Property(e => e.ITyp)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Varietal)
+                .Property(e => e.Vari)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Country)
+                .Property(e => e.Ctry)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Region)
+                .Property(e => e.Reg)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Appellation)
+                .Property(e => e.App)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.MV)
+                .Property(e => e.Mv)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Premise)
+                .Property(e => e.Prem)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Focus)
+                .Property(e => e.Foc)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.FocusBm)
+                .Property(e => e.FocBm)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ODataInvoices>()
-                .Property(e => e.Territory)
+                .Property(e => e.Ter)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Web_ActiveUsers>()

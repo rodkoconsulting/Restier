@@ -18,7 +18,7 @@ namespace RestierService
         [Key]
         [Column(Order = 1)]
         [StringLength(1)]
-        public string Type { get; set; }
+        public string Typ { get; set; }
 
         [StringLength(30)]
         public string Item { get; set; }
@@ -27,60 +27,60 @@ namespace RestierService
         public string Acct { get; set; }
 
         [StringLength(25)]
-        public string Affiliations { get; set; }
+        public string Aff { get; set; }
 
         [StringLength(8000)]
-        public string Description { get; set; }
+        public string Desc { get; set; }
 
         [Column(TypeName = "Date")]
         public DateTime Date { get; set; }
 
-        public decimal? Cases { get; set; }
+        public decimal? Qty { get; set; }
 
-        public decimal? Price { get; set; }
+        public decimal? Pri { get; set; }
 
-        public decimal? Total { get; set; }
+        public decimal? Tot { get; set; }
 
         [StringLength(30)]
-        public string Comment { get; set; }
+        public string Cmt { get; set; }
 
         [StringLength(10)]
         public string Coop { get; set; }
 
         [StringLength(4)]
-        public string RepAcct { get; set; }
+        public string AcctR { get; set; }
 
         [StringLength(4)]
-        public string RepInv { get; set; }
+        public string InvR { get; set; }
 
         [StringLength(20)]
-        public string WineType { get; set; }
+        public string ITyp { get; set; }
 
         [StringLength(25)]
-        public string Varietal { get; set; }
+        public string Vari { get; set; }
 
         [StringLength(25)]
-        public string Country { get; set; }
+        public string Ctry { get; set; }
 
         [StringLength(25)]
-        public string Region { get; set; }
+        public string Reg { get; set; }
 
         [StringLength(50)]
-        public string Appellation { get; set; }
+        public string App { get; set; }
 
         [StringLength(25)]
-        public string MV { get; set; }
+        public string Mv { get; set; }
 
         [StringLength(3)]
-        public string Premise { get; set; }
+        public string Prem { get; set; }
 
         [StringLength(1)]
-        public string Focus { get; set; }
+        public string Foc { get; set; }
 
         [StringLength(1)]
-        public string FocusBm { get; set; }
+        public string FocBm { get; set; }
 
         [StringLength(7)]
-        public string Territory { get; set; }
+        public string Ter { get; set; }
     }
 }

@@ -36,7 +36,7 @@ namespace RestierService.Controllers
         {
             var user = Helper.GetUser();
             if (user == null) return null;
-            return Helper.IsManager(user) ? db.ODataInvoices.Take(68000) : db.ODataInvoices.Where(u => u.RepInv == user.RepCode || u.RepAcct == user.RepCode).Where(p => p.Territory == "PA");
+            return Helper.IsManager(user) ? db.ODataInvoices.Take(200000) : db.ODataInvoices.Where(u => u.InvR == user.RepCode || u.AcctR == user.RepCode).Where(p => p.Ter == "PA");
         }
 
         //// GET: odata/ODataInvoices(5)
