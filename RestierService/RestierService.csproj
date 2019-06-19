@@ -142,8 +142,10 @@
     </Compile>
     <Compile Include="Models\PolApi.cs" />
     <Compile Include="Models\PolEdmApi.cs" />
+    <Compile Include="ODataInvoices.cs" />
     <Compile Include="PolModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web_ActiveUsers.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
