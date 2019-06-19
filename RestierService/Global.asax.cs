@@ -11,8 +11,6 @@ namespace RestierService
     {
         protected void Application_Start()
         {
-            var config = GlobalConfiguration.Configuration;
-            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
