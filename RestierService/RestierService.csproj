@@ -154,7 +154,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
-    <Compile Include="Models\PolEdmApi.cs" />
     <Compile Include="ODataInvoices.cs" />
     <Compile Include="Models\PolModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

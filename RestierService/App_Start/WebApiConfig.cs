@@ -7,7 +7,6 @@ using System.Web.OData.Extensions;
 using Microsoft.Restier.Providers.EntityFramework;
 using Microsoft.Restier.Publishers.OData;
 using Microsoft.Restier.Publishers.OData.Batch;
-using RestierService.Models;
 using System.Web.Http.Filters;
 using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Extensions;
