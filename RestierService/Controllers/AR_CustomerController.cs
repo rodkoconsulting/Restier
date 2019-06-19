@@ -34,7 +34,7 @@ namespace RestierService.Controllers
         public IQueryable<AR_Customer> Get()
         {
 
-            return db.AR_Customer.Take(1);
+            return db.AR_Customer;
         }
 
         //// GET: odata/ODataInvoices(5)
