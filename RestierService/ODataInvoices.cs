@@ -10,13 +10,9 @@ namespace RestierService
 
     public partial class ODataInvoices
     {
-        [Key]
-        [Column(Order = 0)]
         [StringLength(7)]
         public string InvNo { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
         [StringLength(1)]
         public string Typ { get; set; }
 
