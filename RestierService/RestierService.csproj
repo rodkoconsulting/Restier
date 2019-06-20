@@ -137,11 +137,9 @@
     <Compile Include="AR_InvoiceHistoryDetail.cs" />
     <Compile Include="AR_InvoiceHistoryHeader.cs" />
     <Compile Include="Controllers\AR_CustomerController.cs" />
-    <Compile Include="Controllers\ODataInvoicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
     <Compile Include="Models\PolApi.cs" />
     <Compile Include="Models\PolEdmApi.cs" />
     <Compile Include="ODataInvoices.cs" />
