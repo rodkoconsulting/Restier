@@ -20,6 +20,8 @@ namespace RestierService
         [StringLength(1)]
         public string Typ { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
         [StringLength(30)]
         public string Item { get; set; }
 
