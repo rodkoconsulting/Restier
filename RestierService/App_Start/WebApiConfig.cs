@@ -18,9 +18,9 @@ namespace RestierService
 
             // Web API routes
             //config.MapHttpAttributeRoutes();
-            var json = config.Formatters.JsonFormatter;
-            json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            //var json = config.Formatters.JsonFormatter;
+            //json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+            //config.Formatters.Remove(config.Formatters.XmlFormatter);
             config.Filter().Expand().Select().OrderBy().MaxTop(null).Count();
             await config.MapRestierRoute<PolApi>("Pol","api/Pol",new RestierBatchHandler(GlobalConfiguration.DefaultServer));
             //config.Routes.MapHttpRoute(
