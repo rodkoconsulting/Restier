@@ -25,7 +25,7 @@ namespace RestierService.Controllers
         public IQueryable<ODataInvoices> Get()
         {
             var user = Helper.GetUser();
-            if (user == null) return null;
+            if (user == null) return Enumerable.Empty<ODataInvoices>().AsQueryable();
             return Helper.IsManager(user) ? db.ODataInvoices : db.ODataInvoices.Where(u => u.InvR == user.RepCode || u.AcctR == user.RepCode);
         }
 

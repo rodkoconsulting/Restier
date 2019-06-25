@@ -43,11 +43,11 @@ namespace RestierService
 
             modelBuilder.Entity<ODataInvoices>()
                 .Property(e => e.Qty)
-                .HasPrecision(15, 6);
+                .HasPrecision(11, 2);
 
             modelBuilder.Entity<ODataInvoices>()
                 .Property(e => e.Pri)
-                .HasPrecision(15, 6);
+                .HasPrecision(11, 2);
 
             modelBuilder.Entity<ODataInvoices>()
                 .Property(e => e.Tot)
