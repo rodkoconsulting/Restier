@@ -21,7 +21,7 @@ namespace RestierService
                 var usernamePassword = encoding.GetString(Convert.FromBase64String(encodedUsernamePassword));
                 var separatorIndex = usernamePassword.IndexOf(':');
                 var user = usernamePassword.Substring(0, separatorIndex);
-                return context.Web_ActiveUsers.FirstOrDefault(u => u.UserName == user);
+                return context.ODataUsers.FirstOrDefault(u => u.UserName == user);
             }
         }
 

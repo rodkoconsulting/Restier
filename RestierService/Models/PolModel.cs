@@ -13,7 +13,7 @@ namespace RestierService
         }
 
         public virtual DbSet<ODataInvoices> ODataInvoices { get; set; }
-        public virtual DbSet<Web_ActiveUsers> Web_ActiveUsers { get; set; }
+        public virtual DbSet<Web_ActiveUsers> ODataUsers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -118,8 +118,8 @@ namespace RestierService
                 .IsUnicode(false);
 
             modelBuilder.Entity<Web_ActiveUsers>()
-                .Property(e => e.ZoomPercent)
-                .HasPrecision(18, 0);
+                .Property(e => e.AccountType)
+                .IsFixedLength();
         }
     }
 }

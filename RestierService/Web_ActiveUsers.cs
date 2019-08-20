@@ -21,7 +21,5 @@ namespace RestierService
 
         [StringLength(2)]
         public string State { get; set; }
-
-        public decimal ZoomPercent { get; set; }
     }
 }
