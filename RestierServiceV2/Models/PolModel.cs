@@ -1,4 +1,4 @@
-namespace RestierService
+namespace RestierServiceV2
 {
     using System;
     using System.Data.Entity;

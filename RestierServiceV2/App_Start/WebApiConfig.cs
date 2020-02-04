@@ -13,9 +13,9 @@ using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Extensions;
 using Microsoft.Data.Edm;
 using Newtonsoft.Json;
-using RestierService;
+using RestierServiceV2;
 
-namespace RestierService
+namespace RestierServiceV2
 {
     public static class WebApiConfig
     {
