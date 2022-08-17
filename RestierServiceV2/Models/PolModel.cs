@@ -1,15 +1,16 @@
+using System;
+using System.Diagnostics;
+
 namespace RestierServiceV2
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
     public partial class PolModel : DbContext
     {
         public PolModel()
             : base("name=PolConnection")
         {
+            Debug.WriteLine("PolModel ctor");
         }
 
         public virtual DbSet<ODataInvoices> ODataInvoices { get; set; }
