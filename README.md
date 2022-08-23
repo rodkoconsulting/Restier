@@ -2,6 +2,7 @@
 OData driver implementation
 
 # Running the service in Docker
+These docker instructions and docker file is based off the following web publication `https://blog.alexellis.io/run-iis-asp-net-on-windows-10-with-docker/`
 * To rebuild the docker image `docker build -f Dockerfile -t odatadriver:restierv2 .`
 * To run the docker image `docker-compose up`
 
