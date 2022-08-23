@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestierService", "RestierService\RestierService.csproj", "{E9ED95E8-FAE8-4169-877C-C998165E6CF0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestierServiceV2", "RestierServiceV2\RestierServiceV2.csproj", "{55B25737-7D16-4618-A851-EF72F9184D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Runner\Runner.csproj", "{4D1A6320-882B-4C76-87A7-AB275535A58E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runner", "Runner\Runner.csproj", "{4D1A6320-882B-4C76-87A7-AB275535A58E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E9ED95E8-FAE8-4169-877C-C998165E6CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9ED95E8-FAE8-4169-877C-C998165E6CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9ED95E8-FAE8-4169-877C-C998165E6CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9ED95E8-FAE8-4169-877C-C998165E6CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55B25737-7D16-4618-A851-EF72F9184D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55B25737-7D16-4618-A851-EF72F9184D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B25737-7D16-4618-A851-EF72F9184D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1585E8D5-4379-444F-A537-7FAC48FD901A}
 	EndGlobalSection
 EndGlobal
