@@ -5,19 +5,17 @@ using System.Web.OData;
 
 namespace RestierServiceV2.Controllers
 {
-    public class ODataInvoicesController : ODataController
+    public class ODataInvoiceFilterController : ODataController
     {
         private readonly PolModel _db = new PolModel();
 
         [EnableQuery]
+        // GET
         public IQueryable<ODataInvoices> Get()
         {
             Debug.WriteLine("ODataInvoicesController::Get");
-            var user = Helper.GetUser();
-            if (user == null) return Enumerable.Empty<ODataInvoices>().AsQueryable();
-            return Helper.IsManager(user) ? _db.ODataInvoices : _db.ODataInvoices.Where(u => u.InvR == user.RepCode || u.AcctR == user.RepCode);
+            return _db.ODataInvoices.Distinct();
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -26,6 +24,5 @@ namespace RestierServiceV2.Controllers
             }
             base.Dispose(disposing);
         }
-
     }
 }

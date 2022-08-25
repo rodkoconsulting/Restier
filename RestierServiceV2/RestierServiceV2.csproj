@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ODataInvoiceFilterController.cs" />
     <Compile Include="Controllers\ODataOrdersController.cs" />
     <Compile Include="Controllers\ODataUsersController.cs" />
     <Compile Include="Controllers\ODataInvoicesController.cs" />
